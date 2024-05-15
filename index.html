@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>發光料理計算</title>
+    <style>
+      #inputForm > input {
+        width: 60px;
+        height: 30px;
+      }
+      button {
+        width: 100px;
+        height: 50px;
+      }
+      button.b1 {
+        background-color: #f5f5f5;
+      }
+      button.b2 {
+        background-color: #f80;
+      }
+      #results {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>發光料理</h2>
+    <p>
+      輸入新卡數值與等級，以及打算食用的料理點，沒有的填寫0，勾選職業與要吃料的主英雄等級範圍<br />結算為最後吃進肚子裡的數值，要查料理原始沒被倍率引響勾選60下即可
+    </p>
+    <form id="inputForm">
+      <br />
+      <label for="attInput">新卡屬性：</label>
+      <input type="text" id="input0" required placeholder="力" />
+      <input type="text" id="input1" required placeholder="智" />
+      <input type="text" id="input2" required placeholder="體" />
+      <input type="text" id="input3" required placeholder="敏" />
+      <input type="text" id="input4" required placeholder="運" />
+      <input type="text" id="input5" required placeholder="新卡等級" />
+      <br />
+      <br />
+      <label for="attInput">食用料理點：</label>
+      <input type="text" id="input6" required placeholder="力" />
+      <input type="text" id="input7" required placeholder="智" />
+      <input type="text" id="input8" required placeholder="體" />
+      <input type="text" id="input9" required placeholder="敏" />
+      <input type="text" id="input10" required placeholder="運" />
+      <input type="text" id="input11" required placeholder="提升等級" />
+      <br />
+      <br />
+      <div class="Job">
+        <label for="job1">武者</label>
+        <input type="radio" id="job1" name="job" />
+        <label for="job2">響馬</label>
+        <input type="radio" id="job2" name="job" />
+        <label for="job3">仙士</label>
+        <input type="radio" id="job3" name="job" />
+        <label for="job4">策士</label>
+        <input type="radio" id="job4" name="job" />
+        <label for="job5">工匠</label>
+        <input type="radio" id="job5" name="job" />
+      </div>
+      <br />
+      <div>
+        <label for="cookNumberInput">要食用的升變英雄等級：</label>
+        <label for="lv0">60下</label>
+        <input type="radio" id="lv0" name="lv" />
+        <label for="lv1">61-70</label>
+        <input type="radio" id="lv1" name="lv" />
+        <label for="lv2">71-80</label>
+        <input type="radio" id="lv2" name="lv" />
+        <label for="lv3">81-90</label>
+        <input type="radio" id="lv3" name="lv" />
+        <label for="lv4">91-100</label>
+        <input type="radio" id="lv4" name="lv" />
+      </div>
+      <br />
+      <button class="b1" type="reset">清空</button>
+      <button class="b2" type="submit">送出</button>
+    </form>
+    <br />
+    <hr />
+    <br />
+    <div id="results"></div>
+    <script src="./all.js"></script>
+  </body>
+</html>
